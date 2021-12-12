@@ -1,4 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap");
+
+:root {
+  --green-background: #bef264;
+  --dark-green: #84cc16;
+  --darker-green: #4d7c0f;
+  --text-color: white;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
 .App {
-  font-family: sans-serif;
+  font-family: "Lora", serif, sans-serif;
+  font-size: larger;
+}
+.heading {
+  background-color: var(--green-background);
+  padding: 0.9rem;
+  margin: 0 0 1rem 0;
   text-align: center;
+}
+
+.main {
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+}
+.input-div {
+  margin: auto;
+  text-align: center;
+}
+.input-box {
+  padding: 0.3rem;
+  margin: 0.4rem;
+  width: 60%;
+  font-family: "Lora", serif, sans-serif;
+  border: 0.1rem solid var(--dark-green);
+  font-size: 1rem;
+  border-radius: 0.2rem;
+}
+
+.button {
+  padding: 0.4rem;
+  font-family: "Lora", serif, sans-serif;
+  background-color: var(--dark-green);
+  color: var(--text-color);
+  border-radius: 0.2rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.list-container {
+  text-align: center;
+  padding: 0.2rem;
+  margin: 0.5rem auto;
+  max-width: 50%;
+}
+.list-non-bullet {
+  list-style: none;
+  display: inline-block;
+  padding: 0.2rem;
+  max-width: 60%;
+  overflow: hidden;
+}
+.button-remove-style {
+  float: right;
+  font-family: "Lora", serif, sans-serif;
+  margin: auto;
+  padding: auto;
 }

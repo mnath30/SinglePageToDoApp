@@ -2,6 +2,10 @@ import "./styles.css";
 import { useState } from "react";
 
 export default function App() {
+  const Header = () => {
+    return <h1 className="heading">My To Do List</h1>;
+  };
+
   var item;
   var updatedList = [];
   var [list, setList] = useState([]);
@@ -32,32 +36,38 @@ export default function App() {
 
   return (
     <div className="App">
-      <input
-        type="text"
-        value={inpvalue}
-        className="input1"
-        placeholder="Enter Task"
-        onChange={display}
-      />
-      <button type="submit" onClick={addToList}>
-        Add Task
-      </button>
-      <div>
-        {list.map((element) => {
-          return (
-            <div key={element.id}>
-              <li>{element.task}</li>
-              <button
-                type="button"
-                onClick={() => {
-                  remove(element.id);
-                }}
-              >
-                Remove Item
-              </button>
-            </div>
-          );
-        })}
+      <Header className="top" />
+      <div className="main">
+        <div className="input-div">
+          <input
+            className="input-box"
+            type="text"
+            value={inpvalue}
+            placeholder="Enter Task..."
+            onChange={display}
+          />
+          <button className="button" type="submit" onClick={addToList}>
+            Add Task
+          </button>
+        </div>
+        <div>
+          {list.map((element) => {
+            return (
+              <div key={element.id} className="list-container">
+                <li className="list-non-bullet">{element.task}</li>
+                <button
+                  className="button button-remove-style"
+                  type="button"
+                  onClick={() => {
+                    remove(element.id);
+                  }}
+                >
+                  Remove Item
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
